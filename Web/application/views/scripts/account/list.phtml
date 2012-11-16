@@ -1,0 +1,7 @@
+<?php
+include_once 'views/helpers/Account.php';
+if (!empty($this->fetchOutputs)) {
+	include_once 'Aduyng/View/Helper/Fetch.php';
+	$formatter = new Aduyng_View_Helper_Fetch($this);
+	$this->response = $formatter->format($this->fetchOutputs, new AccountHelper($this));
+}

@@ -1,0 +1,10 @@
+<?php echo $this->message ?>
+
+<?php if (isset($this->exception)): ?>
+Message: <?php echo $this->exception->getMessage() ?>
+Stack trace:
+    <?php echo $this->exception->getTraceAsString() ?>
+
+Request Parameters:
+<?php echo $this->escape(var_export($this->request->getParams(), true)) ?>
+<?php endif ?>

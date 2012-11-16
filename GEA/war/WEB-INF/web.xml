@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Textbook</servlet-name>
+		<servlet-class>com.aduyng.textbooktrading.gea.TextbookServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>FavoriteTextbook</servlet-name>
+		<servlet-class>com.aduyng.textbooktrading.gea.FavoriteTextbookServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>College</servlet-name>
+		<servlet-class>com.aduyng.textbooktrading.gea.CollegeServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Account</servlet-name>
+		<servlet-class>com.aduyng.textbooktrading.gea.AccountServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Download</servlet-name>
+		<servlet-class>com.aduyng.textbooktrading.gea.DownloadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Upload</servlet-name>
+		<servlet-class>com.aduyng.textbooktrading.gea.UploadServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>FavoriteTextbook</servlet-name>
+		<url-pattern>/favorite</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Textbook</servlet-name>
+		<url-pattern>/textbook</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>College</servlet-name>
+		<url-pattern>/college</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Account</servlet-name>
+		<url-pattern>/account</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Download</servlet-name>
+		<url-pattern>/download</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Upload</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

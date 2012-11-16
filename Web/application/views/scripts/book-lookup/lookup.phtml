@@ -1,0 +1,11 @@
+<?php
+// var_dump($this->records);exit();
+$this->response = array('records' => array());
+foreach($this->records as $record){
+	if( empty($record['title']) || empty($record['authors']) || empty($record['isbn'])){
+		continue;
+	}
+	
+	
+	$this->response['records'][] = $record;
+}

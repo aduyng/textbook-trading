@@ -1,0 +1,27 @@
+<!-- Indices written at Sat, 31 Dec 2011 02:41:52 UTC -->
+
+<datastore-indexes autoGenerate="false">
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="Textbook" ancestor="false" source="manual">
+        <property name="collegeId" direction="asc"/>
+        <property name="isBuyingRequest" direction="asc"/>
+        <property name="isSold" direction="asc"/>
+        <property name="datePosted" direction="desc"/>
+    </datastore-index>
+
+    <!-- Used 6 times in query history -->
+    <datastore-index kind="Textbook" ancestor="false" source="manual">
+        <property name="collegeId" direction="asc"/>
+        <property name="isBuyingRequest" direction="asc"/>
+        <property name="isSold" direction="asc"/>
+        <property name="tags" direction="asc"/>
+        <property name="datePosted" direction="desc"/>
+    </datastore-index>
+	
+	<datastore-index kind="FavoriteTextbook" ancestor="false" source="manual">
+        <property name="textbookId" direction="asc"/>
+        <property name="phoneNumber" direction="asc"/>
+    </datastore-index>
+
+</datastore-indexes>

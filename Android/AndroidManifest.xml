@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aduyng.textbooktrading.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".HomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AccountActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/update_my_account_information" >
+        </activity>
+        <activity
+            android:name=".SelectCollegeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/please_select_your_college" >
+        </activity>
+        <activity
+            android:name=".SellATextbookActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/sell_a_textbook" >
+        </activity>
+        <activity
+            android:name=".BookSearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/search_for_textbooks" >
+        </activity>
+        <activity
+            android:name=".MySellingTextbookActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/view_my_selling_items" >
+        </activity>
+        <activity
+            android:name=".SearchTextbooksToBuyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/search_for_textbooks_to_buy" >
+        </activity>
+        <activity
+            android:name=".ViewASellingTextbookActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/view_a_selling_textbook" >
+        </activity>
+        <activity
+            android:name=".FavoriteTextbookActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/view_my_favorite_items" >
+        </activity>
+        
+    </application>
+
+</manifest>

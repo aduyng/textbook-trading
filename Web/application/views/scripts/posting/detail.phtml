@@ -1,0 +1,15 @@
+<?php
+if( !empty($this->record)){
+	include_once 'views/helpers/Posting.php';
+
+	$helper = new PostingHelper($this);
+	$this->response = $helper->format($this->record);
+
+	$seller = $this->record->getSeller();
+	include_once 'views/helpers/Account.php';
+	$helper = new AccountHelper($this);
+
+	$this->response['seller'] = $helper->format($seller);
+}
+
+?>

@@ -1,0 +1,9 @@
+<?php
+if( !empty($this->record)){
+	include_once 'views/helpers/College.php';
+
+	$helper = new CollegeHelper($this);
+	$this->response = $helper->format($this->record);
+}
+
+?>

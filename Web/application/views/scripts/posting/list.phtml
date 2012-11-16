@@ -1,0 +1,23 @@
+<?php
+include_once 'views/helpers/Posting.php';
+if (!empty($this->fetchOutputs)) {
+	include_once 'Aduyng/View/Helper/Fetch.php';
+// 	$formatter = new Aduyng_View_Helper_Fetch($this);
+// 	$this->response = $formatter->format($this->fetchOutputs, new PostingHelper($this));
+	$this->response = array();
+	$this->response['numberOfRecords'] = (int) $this->fetchOutputs->getNumberOfRecords();
+	$this->response['numberOfPages'] = (int) $this->fetchOutputs->getNumberOfPages();
+	$this->response['pageNumber'] = (int) $this->fetchOutputs->getPageNumber();
+
+	$records = $this->fetchOutputs->getData();
+	$this->response['records'] = array();
+	foreach ($records as $index => $record) {
+		$this->response['records'][$index] = array(
+			'id' => $record->getId(),
+			'title' => $record->getTitle(),
+			'score' => (double)$record->getSeller()->getScore(),
+			'imageUrl' => $this->url(array('controller' => 'posting', 'action' => 'get-picture', 'id' => $record->getId()))
+		);
+	}
+	
+}
